@@ -1,0 +1,37 @@
+<html>
+<head>
+<title> P78 </title>
+</head>
+<script src= "main.js"></script>
+<body>
+	<center style="margin-top: 40px;">
+<h1>
+	MY FAMILY BOOK
+</h1>
+<img src = "https://thumbs.dreamstime.com/z/family-reading-green-interesting-book-happy-together-delight-173007262.jpg" style= "width: 30%;" id="family-reading-green-interesting-book-happy-together-delight-173007262"
+<h4 id = "family_member_name"></h4>
+<button onclick="update();">next</button>
+</center>
+</body>
+</html>
+
+<script>
+var images = ["https://cdn5.vectorstock.com/i/1000x1000/45/09/cute-cartoon-of-a-young-mother-vector-4414509.jpg", "https://www.netclipart.com/pp/m/21-213031_fathers-day-clipart-inspirational-dad-clipart.png" , "https://tse1.mm.bing.net/th?id=OIP.16RhzZY0RUArX3wzNil9SAHaLU&pid=Api&P=0&w=300&h=300", "https://www.pinclipart.com/picdir/middle/359-3597482_crawfish-drawing-clipart.png"];
+           
+var names = ["mom", "dad", "brother", "pet"];
+          
+var i = 0;
+function update()
+{
+     i++;
+     var numbers_of_family_member_in_array = 4
+     if(i > numbers_of_family_member_in_array )
+     {
+        i = 0;
+     }
+     var updatedImage = images[i];
+     var updatedName  = names[i];
+     document.getElementById("family_member_image").src = updatedImage;
+     document.getElementById("family_member_name").innerHTML = updatedName; 
+}
+</script>
